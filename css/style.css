@@ -61,10 +61,10 @@ li{
   list-style-type: none;
 }
 
-.container{
+/* .container{
   width:100vw;
-  /* height: 100vh; */
-}
+  height: 100vh;
+} */
 
 /* Top Bar */
 .top-bar{
