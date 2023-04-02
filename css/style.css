@@ -224,7 +224,7 @@ color:#051f37;
 }
 .overlay {
   height: 0%;
-  width: 100vw;
+  width: 100%;
   position:relative;
   z-index:11;
   top:-25px;
