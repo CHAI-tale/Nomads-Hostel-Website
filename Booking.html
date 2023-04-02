@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/utility.css">
+        <script src="https://kit.fontawesome.com/526974c0fb.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"
+      />
+        <title>Nomads-Hostel</title>
+        <style>
+            .container-booking{
+                width: 100vw;
+                margin: 80px;
+            }
+            .button{
+                width: 100%;
+                text-align:center;
+            }
+            .dropdown-content1{
+              width:600px;
+              position: absolute;
+              top:70px !important;
+              right: 40px !important;
+              background-color: #051f37;
+              display: flex;
+              padding: 0px 50px;
+              border-radius:15px;
+              box-shadow: -2px 2px 70px -25px rgba(0, 0, 0, 0.623);
+              text-decoration: none;
+              visibility: hidden;
+              transition: .3s ease-in-out;
+              z-index: 1000;
+
+            }
+            .dropdown-lists1 span {
+              color: white;
+            }
+            .dropdown-lists1{
+              line-height: 1.5;
+              padding: 10px;
+              margin: 20px 30px;
+              border-right:1px solid rgba(123, 123, 123, 0.549);
+            }
+            .dropdown-lists1 >ul>li{
+              margin-bottom: 5px;
+            }
+            .dropdown-lists1 span{
+              border-bottom: 1px solid rgba(255, 255, 255, 0.177);
+            }
+            .nav>ul>li>a:hover,
+            .nav>ul>li.dropdown1:hover a ,
+            .nav>ul>li.dropdown1:hover i ,
+            .dropdown-lists1>ul>li>a>span:hover{
+              color:#bf8705;
+            }
+            .nav>ul>li.dropdown1:hover .dropdown-content1{
+              visibility: visible;
+              top:55px;
+              transition: 0.6s ease-in-out;
+            }
+            .dropdown-content1 .button{
+              font-size: 1rem;
+              padding: 5px; 
+            }
+          /* css for drop-down lists ends here */
+            .card1 {
+              display: flex;
+              flex-direction: column;
+              width: 300px;
+              margin: 10px;
+              height: 200px;
+              box-shadow: 0 0 5px #9d9b9ddc;
+              border-radius:5px;
+              background-color: white;
+              padding:5px;
+              position: relative;
+              text-align: center;
+              align-items: center;
+            }
+            .card1:hover{
+              box-shadow: 0 0 5px goldenrod;
+              cursor: pointer;
+              transform: scale(1.03);
+              transition: .3s;
+            }
+            .card1 img {
+              width:100%;
+              height: 100px;
+              object-fit: cover;
+              border-radius: 5px;
+              
+            }
+            .card1>span{
+              position:absolute;
+              top:10px;
+              right:10px;
+              padding: 5px;
+              color:rgba(0, 0, 0, 0.766);
+              background-color:rgba(245, 245, 245, 0.868);
+              z-index:11111;
+              border-radius: 5px;
+              font-size: 1rem;
+            }
+            
+            .card-details1 {
+              padding: 5px 20px;
+              display: flex;
+              flex-direction: column;
+              /* flex-wrap: wrap; */
+              align-content: stretch;
+              background-color: white;
+              border-radius: 5px;
+              width: 100%;
+              height: 100px;
+            }
+            
+            .card-details1>a,.card-details1 h2 {
+              color:#bf8705;
+              text-decoration: none;
+              font-size: 1rem;
+            }
+            
+            .card-details1 p{
+              color:gray;
+              margin-top: 10px;
+              margin-bottom: 5px;
+              /* font-size: 14px;    */
+              flex-wrap: wrap;
+              align-content: stretch;
+              font-size: .8rem;
+            }
+            .card-details1>button{
+              /* display:flex;
+              flex-direction: column;
+              align-items: center; */
+              font-size: small;
+            }
+        </style>
+    </head>
+<body>
+  <div class="container-nav">
+
+    <!-- top-bar -->
+    <div class="top-bar">
+        <div class="left">
+        <P>25% OFF ON ALL BOOKINGS</P>
+        </div>
+        <div class="right">
+            <ul class="list">
+                <li>
+                    <a href="https://www.instagram.com/thepridehotels/?igshid=1ejp7g2rdcxnu" title="Instagram">
+                        <i class="fa-brands fa-instagram" style="color:white"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.tripadvisor.in/" target="_blank" title="TripAdvisor">
+                        <i class="fa fa-tripadvisor" aria-hidden="true" style="color:white"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/ThePrideHotels/" title="Facebook">
+                        <i class="fa-brands fa-square-facebook" style="color:white"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+     </div>
+
+     <!-- Header Section / Navigation-bar -->
+    <header class="header"id="NavBar">
+
+        <!-- Logo -->
+        <div class="logo">
+            <h1>NOMADS</h1><i class="fa-solid fa-person-hiking"></i><i class="fa-solid fa-mountain-city fa-2xl icon-logo"></i><i class="fa-solid fa-person-walking-luggage"></i><h1>HOSTEL</h1>
+        </div>
+
+        <!-- Navigation-list -->  
+        <nav class="nav" id="nb">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="About/about.html">ABOUT</a></li>
+                <li class="dropdown1">
+                    <a href="Destination/destination.html">DESTINATIONS <i class="fa fa-angle-down"></i></a>
+                    <div class="dropdown-content1">
+                        <div class="dropdown-lists1">
+                            <ul>
+                              <li><a href="Destination/delhi.html"><span>Delhi</span></a></li>
+                              <li><a href="Destination/dharamshala.html"><span>Dharmshala</span></a></li>
+                              <li><a href="Destination/gangktop.html"><span>Gangtok</span></a></li>
+                              <li><a href="Destination/goa.html"><span>Goa</span></a></li>
+                              <li><a href="Destination/ooty.html"><span>Ooty</span></a></li>     
+                           </ul>
+                        </div>
+                        <div class="dropdown-lists1">
+                            <ul>
+                              <li><a href="Destination/hyderabad.html"><span>Hyderabad</span></a></li>
+                              <li><a href="Destination/jaipur.html"><span>Jaipur</span></a></li>
+                              <li><a href="Destination/jaisalmer.html"><span>Jaisalmer</span></a></li>
+                              <li><a href="Destination/jodhpur.html"><span>Jodhpur</span></a></li>
+                              <li><a href="Destination/pushkar.html"><span>Pushkar</span></a></li>
+                              <li><a href="Destination/srinagar.html"><span>Shreenagar</span></a></li>
+                           </ul>
+                        </div>
+                        <div class="dropdown-lists1">
+                            <ul>
+                              <li><a href="Destination/kesard.html"><span>Kesar-Devi</span></a></li>
+                              <li><a href="Destination/leh.html"><span>Leh</span></a></li>
+                              <li><a href="Destination/mussori.html"><span>Mussoorie</span></a></li>
+                              <li><a href="Destination/nanital.html"><span>Nainital</span></a></li>
+                              <li><a href="Destination/shimla.html"><span>Shimla</span></a></li>
+                           </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown1">
+                    <a href="index.html#new"><span>WHAT'S NEW <i class="fa fa-angle-down"></i></span></a>
+                    <div class="dropdown-content1">
+                        <div class="card1">
+                            <span class="type">New Lauch</span>
+                            <img src="image/Home_destination/jaipur1.png" alt="Image">
+                            <div class="card-details1">  
+                            <h2><a href="Destination/jaipur.html">JAIPUR</a></h2>
+                            <p>Jaisalmer is golden in the most profound sense, with the colour reflecting in its...</p>
+                            <a href="Destination/jaipur.html"><button class="button">Know-More</button></a>
+                            </div>
+                        </div>
+                        <div class="card1">
+                            <span class="type">New Lauch</span>
+                            <img src="image/Home_destination/jaisalmer.png" alt="Image">
+                            <div class="card-details1">
+                            <h2><a href="Destination/jaisalmer.html">JAISALMER</a></h2>
+                            <p>Jaisalmer is golden in the most profound sense, with the colour reflecting in its...</p>
+                            <a href="Destination/jaisalmer.html"><button class="button">Know-More</button></a>
+                            </div>
+                        </div>
+                        <div class="card1">
+                            <span class="type">New Lauch</span>
+                            <img src="image/Home_destination/push.png" alt="Image">
+                            <div class="card-details1">
+                            <h2><a href="Destination/pushkar.html">PUSHKAR</a></h2>
+                            <p>A blend of holiness, tourism, and modernity..</p>
+                            <a href="Destination/pushkar.html"><button class="button">Know-More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="Blog/Blog.html">BLOG</a></li>
+                <li><a href="contactUs.html">CONTACT US</a></li>
+                <li><a href="Login.html"><span class="button" ><button class="">LOGIN</button></span></a></li>
+                <li></li>
+
+            </ul>
+        </nav>
+
+        <!-- Navigation for Mobile devices -->
+        <nav class="mobile-nav">
+            <ul>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa-solid fa-bars fa-2xl"></i>
+                </a>
+                <li><span class="button"><button class="">LOGIN</button></span></li>
+            </ul>
+            <div id="myNav" class="overlay topnav" >
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-regular fa-rectangle-xmark"></i></a>
+                <div class="overlay-content">
+                  <a href="index.html"><span>HOME</span></a>
+                          <a href="About/about.html"><span>ABOUT</span></a>
+                          <a href="Destination/destination.html"><span>DESTINATIONS</span></a>
+                          <a href="#new"><span>WHAT'S NEW</span></a>
+                          <a href=""><span>BLOG</span></a>
+                          <a href="contactUs.html"><span>CONTACT US</span></a>
+                          <a href="Login.html"><span>LOGIN</span></a>
+                          <a href="About/about.html"><span>FAQs</span></a>
+                          <a href="Booking.html"><span><button class="button">Book Now</button></span></a>
+                </div>
+              </div>
+        </nav>
+    </header>
+  </div>
+    <main>
+        <!-- paste your code here -->
+        <div class="container">
+            <div class="py-5 text-center">
+              <h1  class="Main-headings">BOOKING</h1>
+              <p class="Sub-Headings">
+                Please fill all the details according to your requirement.
+              </p>
+            </div>
+      
+            <div class="row" style="z-index: -100">
+              <div class="col-md-4 order-md-2 mb-4">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="text-muted">Your cart</span>
+                  <span class="badge badge-secondary badge-pill">3</span>
+                </h4>
+                <ul class="list-group mb-3">
+                  <li
+                    class="list-group-item d-flex justify-content-between lh-condensed"
+                  >
+                    <div>
+                      <h6 class="my-0">Room Charges</h6>
+                      <small class="text-muted">Brief description</small>
+                    </div>
+                    <span class="text-muted">$12</span>
+                  </li>
+                  <li
+                    class="list-group-item d-flex justify-content-between lh-condensed"
+                  >
+                    <div>
+                      <h6 class="my-0">Londry charges</h6>
+                      <small class="text-muted">Brief description</small>
+                    </div>
+                    <span class="text-muted">$8</span>
+                  </li>
+                  <li
+                    class="list-group-item d-flex justify-content-between lh-condensed"
+                  >
+                    <div>
+                      <h6 class="my-0">GST</h6>
+                      <small class="text-muted">Brief description</small>
+                    </div>
+                    <span class="text-muted">$5</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between bg-light">
+                    <div class="text-success">
+                      <h6 class="my-0">Promo code</h6>
+                      <small>EXAMPLECODE</small>
+                    </div>
+                    <span class="text-success">-$5</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    <span>Total (USD)</span>
+                    <strong>$20</strong>
+                  </li>
+                </ul>
+      
+                <form class="card p-2">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Promo code"
+                    />
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-secondary">Redeem</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-8 order-md-1">
+                <h4 class="mb-3">Billing address</h4>
+                <form class="needs-validation" novalidate>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="firstName"
+                        >First name<pow style="color: red">*</pow></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="firstName"
+                        placeholder=""
+                        value=""
+                        maxlength="10"
+                        required
+                      />
+                      <div class="invalid-feedback">First name is required.</div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="lastName"
+                        >Last name<pow style="color: red">*</pow></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="lastName"
+                        placeholder=""
+                        value=""
+                        maxlength="10"
+                        required
+                      />
+                      <div class="invalid-feedback">Last name is required.</div>
+                    </div>
+                  </div>
+      
+                  <div class="mb-3">
+                    <label for="username"
+                      >Username<pow style="color: red">*</pow></label
+                    >
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">@</span>
+                      </div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="username"
+                        placeholder="Username"
+                        minlength="4"
+                        maxlength="12"
+                        required
+                      />
+                      <div class="invalid-feedback" style="width: 100%">
+                        Your username is required.
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="mb-3">
+                    <label for="email"
+                      >Email <span class="text-muted">(Optional)</span></label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="you@example.com"
+                      maxlength="20"
+                    />
+                    <div class="invalid-feedback">
+                      Please enter a valid email address for shipping updates.
+                    </div>
+                  </div>
+      
+                  <div class="mb-3">
+                    <label for="address"
+                      >Address<pow style="color: red">*</pow></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="address"
+                      placeholder="1234 Main Street"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please enter your shipping address.
+                    </div>
+                  </div>
+      
+                  <div class="mb-3">
+                    <label for="address2"
+                      >Address 2 <span class="text-muted">(Optional)</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="address2"
+                      placeholder="Apartment or suite"
+                    />
+                  </div>
+      
+                  <div class="row">
+                    <div class="col-md-5 mb-3">
+                      <label for="country"
+                        >Country<pow style="color: red">*</pow></label
+                      >
+                      <select
+                        class="custom-select d-block w-100"
+                        id="country"
+                        required
+                      >
+                        <option value="">Choose...</option>
+                        <option>India</option>
+                        <option>United States</option>
+                        <option>UK</option>
+                        <option>China</option>
+                        <option>Japan</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid country.
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="state">State</label>
+                      <select class="custom-select d-block w-100" id="state">
+                        <option value="">Choose...</option>
+                        <option>Rajasthan</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please provide a valid state.
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                      <label for="zip">Zip<pow style="color: red">*</pow></label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="zip"
+                        placeholder=""
+                             maxlength="6"
+                        required
+                      />
+                      <div class="invalid-feedback">Zip code required.</div>
+                    </div>
+                  </div>
+                  <hr class="mb-4" />
+                  <h4 class="mb-3">Details</h4>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-6 md-3">
+                        <label for="arrive"
+                          >Arrive<pow style="color: red">*</pow></label
+                        >
+                        <input
+                          type="date"
+                          id="arrive"
+                          class="form-control"
+                          name="arrive"
+                        />
+                        <div class="invalid-feedback">Arrive date required.</div>
+                      </div>
+                      <div class="col-sm-6 md-3">
+                        <label for="depart"
+                          >Depart<pow style="color: red">*</pow></label
+                        >
+                        <input
+                          type="date"
+                          id="depart"
+                          class="form-control"
+                          name="depart"
+                        />
+                        <div class="invalid-feedback">Depart date required.</div>
+                      </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                      <div class="col-md-3 mb-3">
+                        <label for="country"
+                          >People<pow style="color: red">*</pow></label
+                        >
+                        <select
+                          class="custom-select d-block w-100"
+                          id="country"
+                          required
+                        >
+                          <option value="">Choose...</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Please select a valid country.
+                        </div>
+                      </div>
+                      <div class="col-md-5 mb-3">
+                        <label for="state"
+                          >Bathroom<pow style="color: red">*</pow></label
+                        >
+                        <select
+                          class="custom-select d-block w-100"
+                          id="state"
+                          required
+                        >
+                          <option value="">Choose...</option>
+                          <option>With Bathroom</option>
+                          <option>Without Bathroom</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Please provide a valid state.
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label for="state"
+                          >Bedding<pow style="color: red">*</pow></label
+                        >
+                        <select
+                          class="custom-select d-block w-100"
+                          id="state"
+                          required
+                        >
+                          <option value="single-bed">Single Bed</option>
+                          <option value="double-bed">Double Bed</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Please provide a valid state.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <label for="state"
+                          >Please describe your needs e.g. Extra beds, children's
+                          cots</label
+                        >
+                        <textarea
+                          class="form-control"
+                          id="textAreaExample1"
+                          rows="4"
+                        ></textarea>
+                        <label
+                          class="form-label"
+                          for="textAreaExample"
+                          placeholder="Enter your needs"
+                        ></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="save-info"
+                    />
+                    <label class="custom-control-label" for="save-info"
+                      >Save this information for next time</label
+                    >
+                  </div>
+                  <hr class="mb-4" />
+                  <h4 class="mb-3">Payment<pow style="color: red">*</pow></h4>
+      
+                  <div class="d-block my-3">
+                    <div class="custom-control custom-radio">
+                      <input
+                        id="credit"
+                        name="paymentMethod"
+                        type="radio"
+                        class="custom-control-input"
+                        checked
+                        required
+                      />
+                      <label class="custom-control-label" for="credit"
+                        >Credit card</label
+                      >
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input
+                        id="debit"
+                        name="paymentMethod"
+                        type="radio"
+                        class="custom-control-input"
+                        required
+                      />
+                      <label class="custom-control-label" for="debit"
+                        >Debit card</label
+                      >
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input
+                        id="paypal"
+                        name="paymentMethod"
+                        type="radio"
+                        class="custom-control-input"
+                        required
+                      />
+                      <label class="custom-control-label" for="paypal">PayPal</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="cc-name">Name on card</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="cc-name"
+                             maxlength="12"
+                        placeholder=""
+                      />
+                      <small class="text-muted">Full name as displayed on card</small>
+                      <div class="invalid-feedback">Name on card is required</div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="cc-number"
+                        >Credit card number<pow style="color: red">*</pow></label
+                      >
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="cc-number"
+                        placeholder="XXXX-XXXX-XXXX-XXXX"
+                          maxlength="19"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Credit card number is required
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 mb-3">
+                      <label for="cc-expiration"
+                        >Expiration<pow style="color: red">*</pow></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="cc-expiration"
+                        placeholder=""
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Expiration date required
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                      <label for="cc-cvv">CVV<pow style="color: red">*</pow></label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="cc-cvv"
+                        placeholder="123"
+                     maxlength="3"
+                        required
+                      />
+                      <div class="invalid-feedback">Security code required</div>
+                    </div>
+                  </div>
+                  <hr class="mb-4" />
+                  <button class="button" type="submit" style="width: 260px;">
+                    Continue to checkout
+                  </button>
+                </form>
+              </div>
+            </div>
+            <br /><br /><br /><br />
+          </div>
+        
+    </main>
+    <!-- footer -->
+    <footer>
+      <div class="footer-head">
+
+          <div class="hotel-name">
+              <a href="#">
+                  <div class="logo">
+                      <h1>NOMADS</h1><i class="fa-solid fa-person-hiking"></i><i class="fa-solid fa-mountain-city fa-2xl icon-logo"></i><i class="fa-solid fa-person-walking-luggage"></i><h1>HOSTEL</h1>
+                  </div>
+               </a> 
+          
+              <p style="font-weight: bold ;word-spacing: 20px;">- LIVE TRAVEL  EXOLORE -</p>
+              <br />
+              <p style="line-height: 1.5">The website ends here, but your journey to the remotest destinations in India and Nepal begins with Nomads-Hostel. Explore with our social hostels, homestays, and luxury stays on your next holiday.</p>
+              <a href="mailto:centralreservations@pridehotel.com" target="_top" class="email-anchorlink"><br />EMAIL: contact@nomads.com</a>
+              
+              <div class="social-links">
+                  <div>
+                      <a href="https://www.facebook.com/ThePrideHotels/" title="Facebook">
+                          <i class="fab fa-facebook-square"></i>
+                      </a>
+                  </div>
+                  <div>
+                      <a href="https://www.instagram.com/thepridehotels/?igshid=1ejp7g2rdcxnu" title="Instagram">
+                          <i class="fab fa-instagram"></i>
+                      </a>
+                  </div>
+                  <div>
+                      <a href="https://www.linkedin.com/company/31500086" target="_blank" title="Linkedin" >
+                          <i class="fa-brands fa-linkedin-in"></i >
+                          </a>
+                  </div>
+                  <div>
+                      <a href="https://www.tripadvisor.in/" target="_blank" title="TripAdvisor"> 
+                          <i class="fa fa-tripadvisor" aria-hidden="true"></i>
+                      </a>
+                  </div>
+              </div>
+          </div>
+
+        <div class="hotel-city" style="word-spacing: 6px;">
+          <ul>
+              <a href="#"><li>KASOL |</li></a>
+              <a href="Destination/dharamshala.html"><li>DHARMSHALA | </li></a>
+              <a href="Destination/hyderabad.html"><li>HYDERABAD |</li></a>
+              <a href="Destination/jodhpur.html"><li>JODHPUR |</li></a>
+              <a href="#"><li>CHENNAI |</li></a>
+              <a href="Destination/gangktop.html"><li>GANGTOK |</li></a>
+              <a href="Destination/goa.html"><li>GOA |</li></a>
+              <a href="#"><li>HALDWANI |</li></a>
+              <a href="Destination/jaisalmer.html"><li>JAISALMER |</li></a>
+              <a href="Destination/jaipur.html"><li>JAIPUR |</li></a>
+              <a href="Destination/kesard.html"><li>KESAR_DEVI |</li></a>
+              <a href="Destination/leh.html"><li>LEH |</li></a>
+              <a href="Destination/mussori.html"><li>MUSSOORIE |</li></a>
+              <a href="#"><li>NAGPUR |</li></a>
+              <a href="Destination/delhi.html"><li>NEW DELHI |</li></a>
+              <a href="Destination/nanital.html"><li>NAINITAL|</li></a>
+              <a href="#"><li>PURI |</li></a>
+              <a href="#"><li>RANAKPUR |</li></a>
+              <a href="#"><li>SASAN GIR |</li></a>
+              <a href="#"><li>UDAIPUR</li></a>
+          </ul>
+        </div>
+      </div>
+      <hr />
+
+      <div class="footer-foot">
+        <div class="footer-foot-menu">
+          <ul>
+            <a href="index.html"><span>HOME</span></a>
+            <a href="About/about.html"><span>ABOUT</span></a>
+            <a href="Destination/destination.html"><span>DESTINATIONS</span></a>
+            <a href="index.html#new"><span>WHAT'S NEW</span></a>
+            <a href="Blog/Blog.html"><span>BLOG</span></a>
+            <a href="contactUs.html"><span>CONTACT US</span></a>
+            <a href="Login.html"><span>LOGIN</span></a>
+            <a href="About/about.html"><span>FAQs</span></a>
+            <a href="Booking.html"><span>Book Now</span></a>
+            <a href="index.html"><li>Home</li></a>
+            <a href="about.html"><li>About Us</li></a>
+            <a href="#"><li>Media & News</li></a>W
+            <a href="#"><li>Contact Us</li></a>
+            <a href="About/about.html"><li>Partner With Us</li></a>
+            <a href="#"><li>Holiday Bonds</li></a>
+            <a href="About/about.html"><li>FAQs</li></a>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <div class="copywrite">
+        <ul>
+          <a href="#"><li>© 2023 NOMADS HOSTEL</li></a>
+          <a href="#"><li>Terms & Conditions</li></a>
+          <a href="#"><li>Privacy Policy</li></a>
+          <a href="#"><li>Grievance Redressal</li></a>
+        </ul>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
