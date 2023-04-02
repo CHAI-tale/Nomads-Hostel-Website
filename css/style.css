@@ -92,7 +92,7 @@ li{
 
 /* Header/ Navbar*/
 .header{
-  min-width: 100vw;
+  min-width: 100%;
   display: flex;
   justify-content:space-around;
   flex-wrap: wrap;
