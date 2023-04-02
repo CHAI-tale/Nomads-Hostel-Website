@@ -69,7 +69,7 @@ li{
 /* Top Bar */
 .top-bar{
   height: 40px;
-  width:100%;
+  width:100vw;
   background-color:#051f37 ;
   color: whitesmoke;
   padding: 1rem;
