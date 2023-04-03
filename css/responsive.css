@@ -229,8 +229,6 @@
         margin:15px 0px ;
         background-color: #bf8705;
         border-radius: 5px;
-        position:relative;
-        box-shadow: 0 0 5px #9d9b9ddc;
       }
       .blog-card-info{
         position:absolute;
@@ -253,9 +251,6 @@
         padding:8px;
         overflow: hidden;
         white-space:nowrap;
-      }
-      .mobile-nav>ul{
-        margin: 0px;
       }
     /*  */
   }
