@@ -179,33 +179,6 @@
         border: 1px solid white;
         transition: .3s ease-in-out;
     }
-    /* .check{
-        flex-direction: column;
-        align-content: center;
-        align-items:center;
-    } */
-    /* .checklb{
-
-        font-size:1rem;
-
-    } */
-    /* .check>div>span{
-        font-size: 1rem;
-        border: 1px solid white;
-    } */
-    /* .check-dest,.checkinp{
-        font-size: 10px;
-      } */
-    /* .check>div>span>input{
-        color: whitesmoke;
-        font-size: 1rem;
-    } */
-    /* .check>div>.button{
-        padding: 5px 5px;
-        margin-bottom: -10px;
-        color: aqua;
-
-    } */
     .check-in-box-home{
         /* top:280px;
         height: 100px; */
@@ -263,7 +236,6 @@
         /* top:280px;
         height: 100px; */
         visibility:hidden;
-        /* display: none; */
     }
     
 }
