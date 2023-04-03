@@ -371,7 +371,7 @@ color: #FFB100;
 }
 hr {
   margin-top: 40px;
-  margin-left: -40px;
+/*   margin-left: -40px; */
   width: 90vw;
 }
 .footer-foot .footer-foot-menu ul {
