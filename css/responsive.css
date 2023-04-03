@@ -209,7 +209,8 @@
     .check-in-box-home{
         /* top:280px;
         height: 100px; */
-        visibility:hidden;
+        /* visibility:hidden; */
+        display: none;
     }
     .hero-title-line>h2{
         position: absolute;
