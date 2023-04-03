@@ -209,8 +209,8 @@
     .check-in-box-home{
         /* top:280px;
         height: 100px; */
-        /* visibility:hidden; */
-        display: none;
+        visibility:hidden;
+        /* display: none; */
     }
     .hero-title-line>h2{
         position: absolute;
@@ -259,6 +259,13 @@
     .nav{
         display:none;
     }
+    .check-in-box-home{
+        /* top:280px;
+        height: 100px; */
+        visibility:hidden;
+        /* display: none; */
+    }
+    
 }
 /* @media screen and (max-width: 800px) {
     .column {
